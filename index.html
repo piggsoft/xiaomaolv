@@ -11,7 +11,7 @@
 
     <title>小毛驴 - 技术空间</title>
 
-     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
@@ -32,11 +32,62 @@
         <script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
         <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .portfolio .portfolio-item {
+            margin: 0 0 15px;
+            right: 0;
+        }
 
+        .portfolio .portfolio-item .portfolio-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .portfolio .portfolio-item .portfolio-link .caption {
+            background: rgba(24, 188, 156, 0.9);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all ease 0.5s;
+            -webkit-transition: all ease 0.5s;
+            -moz-transition: all ease 0.5s;
+        }
+
+        .portfolio .portfolio-item .portfolio-link .caption:hover {
+            opacity: 1;
+        }
+
+        .portfolio .portfolio-item .portfolio-link .caption .caption-content {
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+            top: 50%;
+            margin-top: -12px;
+            color: white;
+        }
+
+        .portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+            margin-top: -12px;
+        }
+
+        .portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+        .portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+            margin: 0;
+        }
+
+        .portfolio * {
+            z-index: 2;
+        }
+    </style>
 </head>
 
 <body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -51,7 +102,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul id="menu" class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -249,10 +300,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source
+                        files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or
+                        a graphic artist looking to share your projects, this template is the perfect starting point!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -359,7 +412,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; piggsoft.com 2017 <a href="http://www.miitbeian.gov.cn/"  target="_blank"> 鄂ICP备17006919号-1</a>
+                        Copyright &copy; piggsoft.com 2017 <a href="http://www.miitbeian.gov.cn/" target="_blank"> 鄂ICP备17006919号-1</a>
                     </div>
                 </div>
             </div>
@@ -367,7 +420,7 @@
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <div id="scrollTop" class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
@@ -389,7 +442,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -426,7 +483,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -463,7 +524,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -500,7 +565,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -537,7 +606,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -574,7 +647,11 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set
+                                by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download
+                                their free set with 16 icons, or you can purchase the entire set with 146 icons for only
+                                $12!
+                            </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -600,7 +677,7 @@
     <!-- jQuery -->
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
@@ -614,6 +691,124 @@
     <!-- Theme JavaScript -->
     <script src="https://cdn.bootcss.com/startbootstrap-freelancer/3.3.7+1/js/freelancer.min.js"></script>
 
+    <!--模板引擎-->
+    <script src="https://cdn.bootcss.com/mustache.js/2.3.0/mustache.min.js"></script>
+    <script id="sectionTpl" type="x-tmpl-mustache">
+        <section id="{{id}}" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>{{name}}</h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+                <div class="row">
+                    {{&items}}
+                </div>
+            </div>
+        </section>
+    </script>
+    <script id="modalTpl" type="x-tmpl-mustache">
+        <div class="portfolio-modal modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>{{title}}</h2>
+                                <hr class="star-primary">
+                                <img src="{{img}}" class="img-responsive img-centered" alt="">
+                                {{&desc}}
+                                <ul class="list-inline item-details">
+                                    <li>Client:
+                                        <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                    </li>
+                                    <li>Service:
+                                        <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="sectionItemTpl" type="x-tmpl-mustache">
+        <div class="col-sm-4 portfolio-item">
+            <a href="#{{id}}" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{img}}" class="img-responsive" alt="{{alt}}">
+            </a>
+        </div>
+    </script>
+    <script id="menuTpl" type="x-tmpl-mustache">
+        <li class="page-scroll">
+            <a href="#{{id}}">{{name}}</a>
+        </li>
+    </script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript">
+        var sections = [];
+        var modals = [];
+        var menus = [];
+        //section模板
+        var sectionTpl = $("#sectionTpl").html();
+        Mustache.parse(sectionTpl);
+
+        //section里面每项内容的模板
+        var sectionItemTpl = $("#sectionItemTpl").html();
+        Mustache.parse(sectionItemTpl);
+
+        //每个详细的section弹出的modal框的模板
+        var modalTpl = $("#modalTpl").html();
+        Mustache.parse(modalTpl);
+
+        //菜单模板
+        var menuTpl = $("#menuTpl").html();
+        Mustache.parse(menuTpl);
+
+        //循环数据，解析模板
+        $.each(templateData, function () {
+            sections.push(createSection(this));
+            menus.push(Mustache.render(menuTpl, this))
+        });
+        console.log(menus)
+        //将模板解析后的html，插入到对应的位置
+        $("header").after(sections);
+        $("#scrollTop").after(modals);
+
+
+        function createSection(section) {
+            var subSections = [];
+            $.each(section.items, function () {
+                subSections.push(Mustache.render(sectionItemTpl, this));
+                modals.push(createModal(this));
+            });
+            return Mustache.render(sectionTpl, { id: section.id, name: section.name, items: subSections.join("") })
+        }
+
+        function createModal(modal) {
+            return Mustache.render(modalTpl, modal);
+        }
+    </script>
 </body>
 
 </html>
